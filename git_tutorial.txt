@@ -1,20 +1,27 @@
-Ò»¡¢´´½¨²Ö¿â
-1.´´½¨ĞÂÄ¿Â¼£º
+ä¸€ã€åˆ›å»ºä»“åº“
+1.åˆ›å»ºæ–°ç›®å½•ï¼š
 $ mkdir learngit
 $ cd learngit
 $ pwd
 /Users/michael/learngit
 
-2.±ä³ÉGit¿ÉÒÔ¹ÜÀíµÄ²Ö¿â£º
+2.å˜æˆGitå¯ä»¥ç®¡ç†çš„ä»“åº“ï¼š
 $ git init
 Initialized empty Git repository in /Users/michael/learngit/.git/
 
-¶ş¡¢Ìí¼ÓÎÄ¼ş
-1.°ÑÎÄ¼ş·Åµ½Ä¿Â¼ÏÂ
+äºŒã€æ·»åŠ æ–‡ä»¶
+1.æŠŠæ–‡ä»¶æ”¾åˆ°ç›®å½•ä¸‹
 
-2.°ÑÎÄ¼şÌí¼Óµ½²Ö¿â£º
+2.æŠŠæ–‡ä»¶æ·»åŠ åˆ°ä»“åº“ï¼š
 $ git add readme1.txt readme2.txt
 $ git add readme3.txt
 
-3.Ìá½»µ½²Ö¿â£º
+3.æäº¤åˆ°ä»“åº“ï¼š
 $ git commit -m "add 3 file"
+
+ä¸‰ã€æŸ¥çœ‹å·¥ä½œåŒºçŠ¶æ€å’Œä¿®æ”¹å†…å®¹
+1.æŸ¥çœ‹å·¥ä½œåŒºçŠ¶æ€
+$ git status
+
+2.æŸ¥çœ‹ä¿®æ”¹çš„å†…å®¹
+$ git diff readme.txt
