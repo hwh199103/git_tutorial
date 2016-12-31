@@ -25,3 +25,18 @@ $ git status
 
 2.查看修改的内容
 $ git diff readme.txt
+
+BS:如果中文乱码则把文件编码格式变为utf-8无bom编码格式
+
+四、版本回退
+1.HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id：
+$ git reset --hard HEAD^
+$ git reset --hard HEAD^^
+$ git reset --hard HEAD~100
+$ git reset --hard 3628164
+
+2.回退前，可以查看提交历史，以便确定要回退到哪个版本：
+$ git log
+
+3.要重返回退前的版本，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
+$ git reflog
