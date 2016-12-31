@@ -13,7 +13,7 @@ br: branch
 unstage: 撤销暂存区的修改
 last: 最后一次修改的信息
 lg：log
-mg: merge --no-ff
+mg: merge --no-ff 
 
 
 $ git config --global alias.st status
