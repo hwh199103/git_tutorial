@@ -1,0 +1,20 @@
+一、创建仓库
+1.创建新目录：
+$ mkdir learngit
+$ cd learngit
+$ pwd
+/Users/michael/learngit
+
+2.变成Git可以管理的仓库：
+$ git init
+Initialized empty Git repository in /Users/michael/learngit/.git/
+
+二、添加文件
+1.把文件放到目录下
+
+2.把文件添加到仓库：
+$ git add readme1.txt readme2.txt
+$ git add readme3.txt
+
+3.提交到仓库：
+$ git commit -m "add 3 file"
