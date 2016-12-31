@@ -1,3 +1,8 @@
+常用命令：
+pwd：查看当前目录
+ls：查看当前目录下的文件
+cat readme.txt 查看文本文件的内容
+
 一、创建仓库
 1.创建新目录：
 $ mkdir learngit
