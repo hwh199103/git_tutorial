@@ -2,6 +2,7 @@
 pwd：查看当前目录
 ls：查看当前目录下的文件
 cat readme.txt 查看文本文件的内容
+rm test.txt 删除test.txt
 
 一、创建仓库
 1.创建新目录：
@@ -70,3 +71,23 @@ BS:会产生两种结果：
 $ git reset HEAD readme.txt
 
 3.已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
+
+七、删除文件
+1. rm test.txt或者直接在工作区删除
+2. 如果确实要从版本库中删除该文件，那就用命令git rm删掉，并且git commit，否则git checkout --file撤销删除。
+
+八、添加远程库
+1.在github上create一个Repository。
+
+2.到本地的需要添加的仓库下运行：
+$ git remote add origin git@github.com:hwh199103/git_tutorial.git
+BS：添加后，远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。
+
+3.把本地库的所有内容推送到远程库（第一次）：
+$ git push -u origin master
+BS:由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来。
+
+4.下次只要本地做了提交，就可以通过下面命令推送到github上：
+$ git push origin master
+
+
