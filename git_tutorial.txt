@@ -148,8 +148,37 @@ master分支应该是非常稳定的，也就是仅用来发布新版本，平�
 每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并。
 分支合并都采用--no-ff模式，版本更新更清晰，而且不会产生不能回退的问题。
 
+7.保存工作现场，方便修复紧急bug等（保存现场前先要保存工作区文件）：
+$ git stash（保存现场）
+$ git stash list（修复完bug后看被保存的现场）
+恢复现场第一种方法：
+$ git stash pop
+恢复现场第一种方法：用git stash apply恢复，恢复后用git stash drop来删除stash内容：
+$ git stash apply stash@{0}
+$ git stash drop stash@{0}
 
+8.强行删除分支（不需要的功能）：
+$ git branch -D feature-whatever
 
+9.多人协作：
+查看远程库信息：
+$ git remote
+
+查看远程库详细信息（如果没有推送权限就没有push）：
+$ git remote -v 
+
+推送分支（多人协作时master和dev需要推送，其他分支视情况而定）：
+$ git push origin dev
+
+从远程库克隆时，只能克隆master分支，要在dev分支上开发，就必须创建远程origin的dev分支到本地，用这个命令创建本地dev分支：
+$ git checkout -b dev origin/dev
+
+多人协作的工作模式：
+1)可以试图用git push origin branch-name推送自己的修改；
+2)如果推送失败，则因为远程分支比你的本地更新，需要先用git pull在本地合并；
+3)如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream branch-name origin/branch-name。
+4)如果合并有冲突，则解决冲突，并在本地提交；
+5)没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！
 
 
 十一、标签管理
