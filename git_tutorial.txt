@@ -121,7 +121,7 @@ $ git merge dev（在master分支下merge）
 4.删除分支：
 git branch -d dev
 
-
+5.解决冲突：
 
 十一、标签管理
 1.创建标签：
